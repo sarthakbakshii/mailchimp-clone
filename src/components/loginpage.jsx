@@ -10,7 +10,7 @@ export const Loginpage=()=>{
         <div id="login">
             <div>
                 <div>
-                    <img src={logoimg} alt="logo"/>
+                    <img src={logoimg} alt="logo" id="logo"/>
                 </div>
                 <div>
                     <div id="logInDiv">
@@ -22,13 +22,13 @@ export const Loginpage=()=>{
                             <form action="" >
                                 <div className="LinputFields">
                                     <div>
-                                        <label>Username</label>
+                                        <label for="username">Username</label>
                                     </div>
-                                    <input type="text" />
+                                    <input type="text" id="username"/>
                                 </div>
                                 <div className="LinputFields">
                                     <div>
-                                        <label id="passwordLabel">
+                                        <label id="passwordLabel" for="password">
                                             <div>Password </div>
                                             <div id="Leye" onClick={hidepassword}>
                                                 <VisibilityOutlinedIcon className="show"/>
@@ -36,7 +36,7 @@ export const Loginpage=()=>{
                                             </div>
                                         </label>
                                     </div>
-                                    <input type="password" />
+                                    <input type="password" id="passsword"/>
                                 </div>
                                 <button id="signInButton">Log In</button>
                                 <div id="LcheckBok">

@@ -55,6 +55,9 @@
   line-height: 20px;
   border: 1px solid rgba(36,28,21,0.3);
 }
+/* .LinputFields>input:focus{
+  border: 1px solid #007c89;
+} */
 #signInButton{
   background-color: #007c89;
   width: 100%;
@@ -137,4 +140,45 @@
   background-color: inherit;
   font-weight: bold;
   min-width: 100px;
+}
+#username:focus{
+  border: 1px solid #007c89;
+}
+#password:focus{
+  border: 1px solid #007c89;
+  outline: #007c89;
+}
+
+/* signup page */
+
+#signup{
+  display: flex;
+}
+#logo{
+  width: 38px;
+  height: 38px;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+#imageDiv{
+  width: 35%;
+  border: 1px solid black; 
+}
+#imageDiv>img{
+  width: 100%;
+  height: 100vh;
+}
+#SformDiv{
+  width: 65%;
+  border: 1px solid cyan;
+}
+#Sform{
+  width: 50%;
+  margin: auto;
+}
+#signUpButton{
+  width: 20%;
+  height: 44px;
+  color: grey;
+  background: none;
 }
