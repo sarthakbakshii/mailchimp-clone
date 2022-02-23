@@ -1,9 +1,11 @@
-import { Navbar } from "./Components/Navbar"
+import { TestNavbar } from "./Components/TestNavbar"
 
 function App() {
   return (
     <div className="App">
-        <Navbar/>
+        <TestNavbar/>
+        <div style={{height : "1000px",
+                    backgroundColor : "#FFE01B"}}  ></div>
     </div>
   );
 }

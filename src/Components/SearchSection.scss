@@ -1,0 +1,29 @@
+.SearchSection{
+    height: 0vh;
+    transition: 0.5s;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    // position: fixed;
+    // overflow: hidden;
+    .searchBox{
+        border: 1px solid;
+    }
+
+    .hand{
+        // border: 1px solid;
+        padding: 10px 100px;
+        transform: translateY(70px);
+        z-index: 1000;
+        display: flex;
+        opacity: 0;
+        justify-content: space-between;
+         .hand1{
+            height: 100px;
+            position: relative;
+              z-index: 2000;
+
+        }
+    }
+   
+}
