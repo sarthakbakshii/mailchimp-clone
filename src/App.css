@@ -1,5 +1,6 @@
 /* CSS started from here */
 
+/* color:#007c89 */
 #login{
   display: flex;
   width: 100vw;
@@ -20,37 +21,120 @@
 #login>:first-child>:nth-child(2){
   margin-left: 25px;
   border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 #login>:last-child{
   border: 1px solid blue;
   width: 70%;
 }
-#login>:last-child>div>img{
+#login>:last-child>div>div>img{
   width: 100%;
   height: 100%;
 }
 #logInDiv{
   width: 95%;
 }
+#logInDiv>p>a{
+  color:#007c89;
+}
 .LinputFields{
-  margin-top: 20px;
+  margin-top: 30px;
   font-size: 1rem;
-    height: 48px;
   font-weight: bold;
 }
 .LinputFields>div{
   margin-bottom: 10px;
 }
 .LinputFields>input{
+  padding-left: 10px;
   width: 100%;
-  height: 30px;
+  min-height: 46px;
+  font-size: 1rem;
+  line-height: 20px;
+  border: 1px solid rgba(36,28,21,0.3);
 }
 #signInButton{
   background-color: #007c89;
   width: 100%;
   height: 30px;
-  margin: auto;
   margin-top: 30px;
-  font-size: 1.6rem;
-    height: 48px;
+  font-size: 1rem;
+  height: 48px;
+  outline: none;
+  color: white;
+}
+#passwordLabel{
+  display: flex;
+  justify-content: space-between;
+}
+.show{
+  vertical-align: top;
+}
+#Leye{
+  color:#007c89
+}
+#Leye:hover{
+  color: #0f4e55;
+}
+#Leye>svg{
+  font-size: 20px;
+  margin-right: 10px;
+}
+#LcheckBok{
+  border: 1px solid cyan;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1rem;
+  line-height: 18px;
+  font-weight: bold;
+}
+#LcheckBok>input{
+  width: 20px;
+  height: 20px;
+}
+#LcheckBok>label{
+  text-align: top;
+  margin-left: 10px;
+}
+#Lforgot{
+  text-align: center;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+#Lforgot>span{
+  margin: 0 10px;
+}
+#Lforgot>a{
+  color:#007c89;
+}
+#Lfooter{
+  font-size: 13px;
+  border: 1px solid green;
+  color: rgba(36,28,21,0.65);
+}
+#LimageBottom{
+    position: absolute;
+    /* right: 5%;
+    left: 5%; */
+    justify-content: center;
+    align-items: center;
+    bottom: 10%;
+    margin: auto;
+    padding-top: 0;
+    text-align: center;
+    border: 1px solid cyan;
+}
+#imageDiv{
+  position: relative;
+}
+#LimageBottom>p>button{
+  padding: 10px;
+  border: 2px solid black;
+  background-color: inherit;
+  font-weight: bold;
+  min-width: 100px;
 }
