@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
-}
+/* CSS started from here */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#login{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
 }
-
-.App-link {
-  color: #61dafb;
+#login>:first-child{
+  border: 1px solid red;
+  width: 35%;
+  border-left: 10px solid yellow;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#login>:first-child>div>img{
+  width: 38px;
+  height: 38px;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+#login>:first-child>:nth-child(2){
+  margin-left: 25px;
+  border: 1px solid black;
+}
+#login>:last-child{
+  border: 1px solid blue;
+  width: 70%;
+}
+#login>:last-child>div>img{
+  width: 100%;
+  height: 100%;
+}
+#logInDiv{
+  width: 95%;
+}
+.LinputFields{
+  margin-top: 20px;
+  font-size: 1rem;
+    height: 48px;
+  font-weight: bold;
+}
+.LinputFields>div{
+  margin-bottom: 10px;
+}
+.LinputFields>input{
+  width: 100%;
+  height: 30px;
+}
+#signInButton{
+  background-color: #007c89;
+  width: 100%;
+  height: 30px;
+  margin: auto;
+  margin-top: 30px;
+  font-size: 1.6rem;
+    height: 48px;
 }
