@@ -1,5 +1,5 @@
 import logoimg from "../assets/logo-img.svg"
-import leftimg from "../assets/ezgif.com-gif-maker.jpg"
+// import leftimg from "../assets/ezgif.com-gif-maker.jpg"
 import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 
 export const Signup=()=>{
@@ -39,21 +39,25 @@ export const Signup=()=>{
                             </div>
                             <input type="password" id="passsword"/>
                         </div>
-                        <div id="LcheckBok">
-                            <input type="checkbox" />
-                            <label> I don't want to receive <a href="">promotional emails</a> from Mailchimp. </label>
+                        <div id="LcheckBok ScheckBox" className="Sparagraph" >
+                            <input type="checkbox" id="ScheckBoxInput"/>
+                            <label> I don't want to receive <a href="/">promotional emails</a> from Mailchimp. </label>
+                        </div>
+                        <div className="Sparagraph">
+                            <p>By creating an account, you agree to our <a href="/">Terms</a> and have read and acknowledge the <a href="/">Global Privacy Statement</a></p>
                         </div>
                         <button id="signUpButton">Sign Up</button>
                     </form>
-                    <div>
-                        <p>
-                        ©2001–2022 All Rights Reserved. Mailchimp® is a registered trademark of The Rocket Science Group, LLC. <a href="">Cookie Preferences</a> <a href="">Privacy</a> and <a href="">Terms</a>
-                        </p>
-                    </div>
+                </div>
+                <div id="StermsConditions">
+                    <p>
+                    ©2001–2022 All Rights Reserved. Mailchimp® is a registered trademark of The Rocket Science Group, LLC. <a href="/">Cookie Preferences</a> <a href="/">Privacy</a> and <a href="/">Terms</a>
+                    </p>
                 </div>
             </div>
-            <div id="imageDiv">
-                <img src={leftimg} alt="imageDiv" />
+            <div id="SimageDiv">
+                {/* <img src={leftimg} alt="imageDiv" /> */}
+                {/* <div id="rightYellowDiv"></div> */}
             </div>
         </div>
     )

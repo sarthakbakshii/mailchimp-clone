@@ -8,7 +8,7 @@ import { HidePassword } from "./smallfunctions";
 export const Loginpage=()=>{
     return (
         <div id="login">
-            <div>
+            <div id="Lbody">
                 <div>
                     <img src={logoimg} alt="logo" id="logo"/>
                 </div>
@@ -51,19 +51,16 @@ export const Loginpage=()=>{
                             </div>
                         </div>
                     </div>
-                    <div id="Lfooter">
+                </div>
+                <div id="Lfooter">
                         <p>
                         ©2001–2022 All Rights Reserved. Mailchimp® is a registered trademark of The Rocket Science Group, LLC. Cookie Preferences, Privacy, and Terms.
                         </p>
-                    </div>
                 </div>
-                <div></div>
             </div>
             <div>
                 <div>
-                    <div id="imageDiv">
-                        <img src={loginpagebackimg} alt="loginpage-img" />
-                    </div>
+                    <div id="imageDiv"></div>
                     <div id="LimageBottom">
                         <p>
                             <h3>E-commerce Time Savers</h3>

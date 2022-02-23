@@ -7,8 +7,8 @@ import { Signup } from './components/signup';
 function App() {
   return (
     <div className="App">
-      {/* <Loginpage/> */}
-      <Signup/>
+      <Loginpage/>
+      {/* <Signup/> */}
     </div>
   );
 }
