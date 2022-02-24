@@ -3,7 +3,9 @@ export const Home = () =>{
                     backgroundColor : "#FFE01B",
                     display : "flex",
                     "justifyContent" : "center",
-                alignItems : "center"}}  >
-                        helloooo
+                alignItems : "center",
+            fontSize : "200px"}}  >
+                       
+            HOME PAGE
                     </div>
 }

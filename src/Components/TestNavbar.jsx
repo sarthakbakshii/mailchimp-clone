@@ -43,7 +43,7 @@ export const TestNavbar = () =>{
 
 
     return (<> 
-            <SearchSection cancleSearch={cancleSearch} />
+            <SearchSection cancleSearch={cancleSearch } />
 
             <div id="testNavbar" 
                 onMouseOver={onmouseover}

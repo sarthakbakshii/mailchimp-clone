@@ -3,32 +3,36 @@ import SearchIcon from '@mui/icons-material/Search';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import { db } from '../../firebase-config'
 import { useState } from "react";
-import { useEffect } from "react";
+import { useEffect , useRef } from "react";
 import { collection, getDocs, query , where } from "firebase/firestore";
+import { useNavigate } from 'react-router-dom'
 
-export const SearchSection = ({cancleSearch}) =>{
+export const SearchSection = ({cancleSearch }) =>{
 
     const [ pages , setpages ] = useState([]);
     console.log(pages)
+
+    const navigate = useNavigate();
     
     // ------ search area
     const [text , setText] = useState("");
+    const inputEl = useRef(null);
 
     const submitHandler = () =>{
         const pageCollectionRef = collection( db , "pages");
         const que = query(pageCollectionRef , where("section", "==", text))
 
             const getPages = async () =>{
-                try {
                      const data = await getDocs(que);
                      setpages( data.docs.map( (doc) => ({ ...doc.data(), id : doc.id })     ))
-                    
-                } catch (error) {
-                    console.log("error",error)
-                }
-               
             }
-            getPages()
+            getPages();
+            inputEl.current.value = "";
+
+        
+        cancleSearch();
+        navigate(`/search?q=${text}`);
+
     }
     const KeyboardEnterHandler = (e) =>{
         if (e.key === 'Enter') submitHandler()
@@ -42,7 +46,7 @@ export const SearchSection = ({cancleSearch}) =>{
                     <div className="top">
                         <input className="searchInput" type="text"
                         placeholder="Search Mailchimp" 
-                        defaultValue={text}
+                        ref={inputEl}
                         onChange={(e) =>{ setText(e.target.value)}}
                          onKeyDown={KeyboardEnterHandler} 
                        />
