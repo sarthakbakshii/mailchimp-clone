@@ -5,9 +5,11 @@ import { db } from '../../firebase-config'
 import { useState } from "react";
 import { useEffect , useRef } from "react";
 import { collection, getDocs, query , where } from "firebase/firestore";
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+import { useToast , Button } from '@chakra-ui/react';
 
 export const SearchSection = ({cancleSearch }) =>{
+     const toast = useToast()
 
     const [ pages , setpages ] = useState([]);
     console.log(pages)
@@ -79,6 +81,11 @@ export const SearchSection = ({cancleSearch }) =>{
                          <img className="hand1" src="https://mailchimp.com/release/plums/cxp/images/search-hand-rt.2eb44aca.png" alt="" />
                 
                 </div>
+
+           
+        
+      
+   
                 
         
         </div>)
