@@ -22,6 +22,7 @@ export const SearchSection = ({cancleSearch}) =>{
             getPages()
     },[])
 
+    // ------ search area
 
 
 
