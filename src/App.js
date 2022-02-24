@@ -1,11 +1,18 @@
-import { TestNavbar } from "./Components/TestNavbar"
+import { TestNavbar } from "./Components/TestNavbar";
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
+import { Home} from './Components/Home'
 
 function App() {
   return (
     <div className="App">
         <TestNavbar/>
-        <div style={{height : "1000px",
-                    backgroundColor : "#FFE01B"}}  ></div>
+        <Routes>
+            <Route path={"/"} element={ <Home/> } />
+        </Routes>
+        
     </div>
   );
 }

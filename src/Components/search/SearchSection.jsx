@@ -1,7 +1,7 @@
 import "./SearchSection.scss"
 import SearchIcon from '@mui/icons-material/Search';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
-import { db } from '../firebase-config'
+import { db } from '../../firebase-config'
 import { useState } from "react";
 import { useEffect } from "react";
 import { collection, getDocs, query , where } from "firebase/firestore";
@@ -9,20 +9,30 @@ import { collection, getDocs, query , where } from "firebase/firestore";
 export const SearchSection = ({cancleSearch}) =>{
 
     const [ pages , setpages ] = useState([]);
-    console.log("pages",pages)
+    console.log(pages)
+    
+    // ------ search area
+    const [text , setText] = useState("");
 
-    const pageCollectionRef = collection( db , "pages");
-    const que = query(pageCollectionRef , where("section", "==", "blogs"))
-    useEffect( () =>{
+    const submitHandler = () =>{
+        const pageCollectionRef = collection( db , "pages");
+        const que = query(pageCollectionRef , where("section", "==", text))
+
             const getPages = async () =>{
-                const data = await getDocs(que);
-                console.log("data", data)
-                setpages( data.docs.map( (doc) => ({ ...doc.data(), id : doc.id })     ))
+                try {
+                     const data = await getDocs(que);
+                     setpages( data.docs.map( (doc) => ({ ...doc.data(), id : doc.id })     ))
+                    
+                } catch (error) {
+                    console.log("error",error)
+                }
+               
             }
             getPages()
-    },[])
-
-    // ------ search area
+    }
+    const KeyboardEnterHandler = (e) =>{
+        if (e.key === 'Enter') submitHandler()
+    }
 
 
 
@@ -31,12 +41,16 @@ export const SearchSection = ({cancleSearch}) =>{
                 <div className="searchBox">
                     <div className="top">
                         <input className="searchInput" type="text"
-                        placeholder="Search Mailchimp" />
+                        placeholder="Search Mailchimp" 
+                        defaultValue={text}
+                        onChange={(e) =>{ setText(e.target.value)}}
+                         onKeyDown={KeyboardEnterHandler} 
+                       />
 
                         <SearchIcon className="searchBtn" 
                         sx={{ fontSize: 40 }} 
                         onClick={ () =>{
-                            alert("search hoga sabar karo")
+                           submitHandler()
                         }} />
 
                         <span id="showCancle" className="cancle"
