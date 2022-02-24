@@ -1,8 +1,30 @@
 import "./SearchSection.scss"
 import SearchIcon from '@mui/icons-material/Search';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
+import { db } from '../firebase-config'
+import { useState } from "react";
+import { useEffect } from "react";
+import { collection, getDocs, query , where } from "firebase/firestore";
 
 export const SearchSection = ({cancleSearch}) =>{
+
+    const [ pages , setpages ] = useState([]);
+    console.log("pages",pages)
+
+    const pageCollectionRef = collection( db , "pages");
+    const que = query(pageCollectionRef , where("section", "==", "blogs"))
+    useEffect( () =>{
+            const getPages = async () =>{
+                const data = await getDocs(que);
+                console.log("data", data)
+                setpages( data.docs.map( (doc) => ({ ...doc.data(), id : doc.id })     ))
+            }
+            getPages()
+    },[])
+
+
+
+
     return ( 
         <div id="SearchSection" className="SearchSection overflowNo">
                 <div className="searchBox">
