@@ -21,14 +21,29 @@ export const TestNavbar = () =>{
         document.getElementById("testNavbar").style.background = "#FFE01B";
     }
 
-    const showSearch = () =>{
+    const showSearch = (e) =>{
+        window.scrollTo(0, 0);
+        //  document.getElementById("hand").style.opacity = "2";
         document.getElementById("SearchSection").style.height = "89vh";
-         document.getElementById("hand").style.opacity = "1";
+        document.getElementById("SearchSection").classList.remove("overflowNo")
+        
          document.querySelector("body").style.overflow = "hidden"
-    }
+         document.getElementById("testNavbar").style.background = "white";
+    }  
+    
+    const cancleSearch = (e) =>{
+        //  document.getElementById("hand").style.opacity = "0";
+        document.getElementById("SearchSection").style.height = "0vh";
+        document.getElementById("SearchSection").classList.add("overflowNo")
+        
+         document.querySelector("body").style.overflow = "auto"
+         document.getElementById("testNavbar").style.background = "white";
+    }  
+
+    
 
     return (<> 
-            <SearchSection/>
+            <SearchSection cancleSearch={cancleSearch} />
 
             <div id="testNavbar" 
                 onMouseOver={onmouseover}

@@ -1,10 +1,36 @@
 import "./SearchSection.scss"
+import SearchIcon from '@mui/icons-material/Search';
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 
-export const SearchSection = () =>{
+export const SearchSection = ({cancleSearch}) =>{
     return ( 
-        <div id="SearchSection" className="SearchSection">
+        <div id="SearchSection" className="SearchSection overflowNo">
                 <div className="searchBox">
-                    
+                    <div className="top">
+                        <input className="searchInput" type="text"
+                        placeholder="Search Mailchimp" />
+
+                        <SearchIcon className="searchBtn" 
+                        sx={{ fontSize: 40 }} 
+                        onClick={ () =>{
+                            alert("search hoga sabar karo")
+                        }} />
+
+                        <span id="showCancle" className="cancle"
+                        onClick={cancleSearch}>X</span>
+
+                        
+                    </div>
+                     <div className="bottom">
+                        <h3>TRY SEARCHING FOR</h3>
+                        <div className="buttonBox">
+                                <button>Landing pages</button>
+                                 <button>Api</button>
+                                  <button>QuickBooks</button>
+                        
+                        </div>
+                    </div>
+
                 </div>
 
                 <div id="hand" className="hand">
