@@ -53,8 +53,7 @@ export const TestNavbar = () =>{
                         <button className="login">login</button>
                         <button className="signup">Signup for free</button>
             </div>
-            <div className="navSpace"></div>   
-            <div>test</div>
+            <div className="navSpace"></div>  
             
             </>)
 }
