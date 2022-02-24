@@ -1,7 +1,7 @@
 import "./TestNAvbar.css";
 import React from 'react';
 
-import { SearchSection } from './SearchSection'
+import { SearchSection } from './search/SearchSection'
 
 
 export const TestNavbar = () =>{
@@ -53,8 +53,7 @@ export const TestNavbar = () =>{
                         <button className="login">login</button>
                         <button className="signup">Signup for free</button>
             </div>
-            <div className="navSpace"></div> 
-            <div> sarthak repo</div>      
+            <div className="navSpace"></div>   
             
             </>)
 }
