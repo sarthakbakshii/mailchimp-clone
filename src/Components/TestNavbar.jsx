@@ -54,6 +54,7 @@ export const TestNavbar = () =>{
                         <button className="signup">Signup for free</button>
             </div>
             <div className="navSpace"></div>   
+            <div>test</div>
             
             </>)
 }
