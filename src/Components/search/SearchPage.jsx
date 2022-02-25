@@ -62,6 +62,7 @@ export const SearchPage = () =>{
 
 
     return <>
+    <div style={{height:"80px"}}></div>
         <div className='banner'>
             <div className='cont'>
                 <Input className='input' size='lg' 
