@@ -1,0 +1,10 @@
+.hover1{
+    background-color: lightgray;
+    width: 400px;
+    height: 600px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.hover1-div{
+    
+}
