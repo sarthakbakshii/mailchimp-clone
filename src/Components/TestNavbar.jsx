@@ -1,7 +1,8 @@
 import "./TestNAvbar.css";
 import React from 'react';
 
-import { SearchSection } from './search/SearchSection'
+import { SearchSection } from './search/SearchSection';
+import {Navbar} from "./navbar/navbar";
 
 
 export const TestNavbar = () =>{
@@ -44,6 +45,7 @@ export const TestNavbar = () =>{
 
     return (<> 
             <SearchSection cancleSearch={cancleSearch } />
+            
 
             <div id="testNavbar" 
                 onMouseOver={onmouseover}
