@@ -1,8 +1,13 @@
 import logoimg from "../assets/logo-img.svg"
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export const Recoverdone=()=>{
+    
+    const userReduxEmail = useSelector( store => store.email);
+    console.log("redux data",userReduxEmail );
+
     const usenavigate=useNavigate()
 
     function navigatetologin(){
@@ -24,7 +29,7 @@ export const Recoverdone=()=>{
                             <div id="greenSuccessDiv">
                                 <div>Success!</div>
                                 <div>An email with your username has been sent to</div>
-                                <div>pavithranr65@gmail.com</div>
+                                <div>{userReduxEmail}</div>
                             </div>
                         </div>
                         <p className="Rpara">If the email does not arrive soon, check your spam folder. It was sent from <span id="RDpbold">confirm@mailchimp.com</span>.</p>
