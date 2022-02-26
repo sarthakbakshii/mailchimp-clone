@@ -1,13 +1,13 @@
 .hover1{
     background-color: rgb(238, 238, 238);
     width: 400px;
-    height: 750px;
+    height: 700px;
     overflow-y: scroll;
     overflow-x: hidden;
     padding: 5%;
     position: absolute;
     top: 80px;
-    left: 31.6%;
+    left: 400px;
 }
 .hover1-div{
     margin-top: 25%;
@@ -16,4 +16,8 @@
 }
 .hover1-div>h3{
     margin: 8% 0;
+}
+.hover1-div>p{
+    font-size: small;
+    font-style: italic;
 }
