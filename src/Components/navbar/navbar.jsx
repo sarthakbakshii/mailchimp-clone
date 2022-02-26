@@ -97,7 +97,7 @@ onMouseOut={onmouseout} >
     </div>
     
     <Link to="/"><div className="nav-center">
-    <img src={logoimg} className="logoimg"/>
+    <img src={logoimg} className="logoimg" alt="logo"/>
       <h1>Mail Chimp</h1> 
       
         {/* <img src="https://www.pikpng.com/pngl/m/274-2747614_mailchimp-logo-transparent-mailchimp-clipart.png" alt="" className="logo-chimp" onClick={()=>{
@@ -107,14 +107,10 @@ onMouseOut={onmouseout} >
     <div className="nav-right">
     {/* <img src={require("../icons/search.png")} className="search"/> */}
     <i class="fi fi-br-search search" onClick={showSearch}></i>
-    <button className="nav-login">Log In</button>
-    <button className="nav-signup" style={{border:"none"}}>Sign Up Free</button>
+    <button className="nav-login"><Link to="/login">Log In</Link></button>
+    <button className="nav-signup" style={{border:"none"}}><Link to="/signup">Sign Up Free</Link></button>
     </div>
    
-
-    
-
-
 </div>
 {/* <div className="navSpace"></div>   */}
 <div className="hoverDivs"> 

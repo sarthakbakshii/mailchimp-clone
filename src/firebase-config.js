@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from 'firebase/firestore'
+import {createUserWithEmailAndPassword,signInWithEmailAndPassword, getAuth, sendPasswordResetEmail} from "firebase/auth"
 
 
 const firebaseConfig = {
@@ -19,3 +20,16 @@ const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 
 const analytics = getAnalytics(app);
+const auth = getAuth()
+
+export const signup=(email,password)=>{
+    return createUserWithEmailAndPassword(auth,email,password)
+}
+
+export const login=(email,password)=>{
+    return signInWithEmailAndPassword(auth,email,password)
+}
+
+export const resetpassword=(email)=>{
+    return sendPasswordResetEmail(auth,email)
+}

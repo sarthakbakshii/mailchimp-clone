@@ -1,0 +1,453 @@
+/* CSS started from here */
+
+/* color:#007c89 */
+#login{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    /* overflow: hidden; */
+    background-attachment: fixed;
+  }
+  #login>:first-child{
+    width: 35%;
+    border-left: 10px solid #ffe01b;
+  }
+  #login>:first-child>div>img{
+    width: 38px;
+    height: 38px;
+    margin-left: 15px;
+    margin-top: 15px;
+  }
+  #login>:first-child>:nth-child(2){
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #login>:last-child{
+    width: 70%;
+  }
+  #login>:last-child>div>div>img{
+    width: 100%;
+    height: 100%;
+  }
+  #logInDiv{
+    width: 95%;
+    margin-top: 5%;
+  }
+  #logInDiv>h1{
+    font-size: 30px; 
+    font-weight: bold;
+  }
+  #logInDiv>p>a{
+    color:#007c89;
+  }
+  .LinputFields{
+    margin-top: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    max-width: 440px;
+  }
+  .LinputFields>div{
+    margin-bottom: 10px;
+  }
+  .LinputFields>input{
+    padding-left: 10px;
+    width: 100%;
+    min-height: 46px;
+    font-size: 1rem;
+    line-height: 20px;
+    border: 1px solid rgba(36,28,21,0.3);
+    max-width: 440px;
+  }
+  /* .LinputFields>input:focus{
+    border: 1px solid #007c89;
+  } */
+  #signInButton{
+    background-color: #007c89;
+    width: 100%;
+    height: 30px;
+    margin-top: 30px;
+    font-size: 1rem;
+    height: 48px;
+    outline: none;
+    color: white;
+    border: none;
+  }
+  #passwordLabel{
+    display: flex;
+    justify-content: space-between;
+  }
+  .show{
+    vertical-align: top;
+  }
+  #Leye{
+    color:#007c89
+  }
+  #Leye:hover{
+    color: #0f4e55;
+  }
+  #Leye>svg{
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  #Lbody{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+  }
+  #LcheckBok{
+    /* border: 1px solid cyan; */
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1rem;
+    line-height: 18px;
+    /* font-weight: bold; */
+  }
+  #LcheckBok>input{
+    width: 20px;
+    height: 20px;
+  }
+  #LcheckBok>label{
+    text-align: top;
+    margin-left: 10px;
+  }
+  #Lforgot{
+    text-align: center;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  #Lforgot>span{
+    margin: 0 10px;
+  }
+  #Lforgot>a{
+    color:#007c89;
+  }
+  #Lfooter{
+    font-size: 13px;
+    /* border: 1px solid green; */
+    color: rgba(36,28,21,0.65);
+    position:fixed;
+    bottom: 0;
+    width: 35%;
+    margin: 0 5px;
+    line-height: 1.5;
+  }
+  #LimageBottom{
+      position: absolute;
+      /* right: 5%;
+      left: 5%; */
+      right: 5%;
+      justify-content: center;
+      align-items: center;
+      bottom: 5%;
+      padding-top: 0;
+      text-align: center;
+      /* border: 1px solid cyan; */
+      margin: auto;
+      width: 50%;
+  }
+  #imageDiv{
+    background-image: url(https://cdn-images.mailchimp.com/billboards/php3t59MW.jpeg);
+    background-position-x: center;
+    background-position-y: center;
+    height: 100%;
+    position: absolute;
+    background-color: #d9d9d9;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width:65%;
+    transform: translateX(15px);
+  }
+  #username:focus{
+    outline: none;
+    border: 2px solid #007c89;
+  }
+  #passsword:focus{
+    outline: none;
+    border: 2px solid #007c89;
+  }
+  #LimageBottom>p>button{
+    padding: 10px;
+    border: 2px solid black;
+    background-color: inherit;
+    font-weight: bold;
+    min-width: 100px;
+  }
+  #usernotfound{
+    display: flex;
+    background-color: #fbcfbd;
+    color:#241c15;
+    padding: 8px;
+    line-height: 1.6;
+    margin-top: 15px;
+  }
+  #usernotfound a{
+    color: #241c15;
+  }
+  #notallowed{
+    display: block;
+    margin: auto;
+    padding: 0 15px 0 5px;
+    width: 50px;
+  }
+  #Suser{
+    display: none;
+  }
+  /* signup page */
+  
+  #email:focus{
+    outline: none;
+    border: 2px solid #007c89;
+  }
+  #signup{
+    display: flex;
+  }
+  #logo{
+    width: 38px;
+    height: 38px;
+    margin-left: 15px;
+    margin-top: 15px;
+  }
+  /* #SimageDiv{
+    width: 30%;
+    border: 1px solid black; 
+    background-image: url(https://login.mailchimp.com/release/1.1.1577ee53971db3fe73beb54c0952abdb32bf24fba/images/brand_assets/illos/art-hero-flowers.png);
+    background-size: cover;
+    background-position: left;
+    padding-left: 100px;
+    box-sizing: border-box;
+    z-index: 2;
+  } */
+  #SimageDiv{
+    background: no-repeat bottom 10% left 0 url(https://login.mailchimp.com/release/1.1.18989beff3e65725c15a3c59a3f769b8767de4893/images/brand_assets/illos/art-hero-flowers.png),linear-gradient(to left, #ffe01b 85%, transparent 85%);
+    width: clamp(200px, 30%, 650px);
+    box-sizing: border-box;
+  }
+  #imageDiv>img{
+    width: 100%;
+    height: 100vh;
+  }
+  #SformDiv{
+    width: 70%;
+    border-left: 8px solid #ffe01b;
+  }
+  #Sform{
+    width: 52%;
+    margin: auto;
+  }
+  #Sform>div>h4{
+    margin: 0;
+  }
+  #Sform>div>h4>a{
+    color: #007c89;
+    text-decoration: none;
+  }
+  #Sform>div>h1{
+    margin: 0;
+    margin-bottom: 6px;
+  }
+  #signUpButton{
+    width: 25%;
+    height: 44px;
+    color: grey;
+    background: none;
+    border: 1px solid rgba(36,28,21,0.3);
+  }
+  /* #rightYellowDiv{
+    background-color: rgba(255, 255, 1, 0.849);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  } */
+  .Sparagraph{
+    margin: 25px 0;
+    text-align: left;
+    line-height: 1.5;
+    font-size: 14px;
+  }
+  .Sparagraph a{
+    color: #007c89;
+  }
+  #ScheckBox{
+    width: max-content;
+  }
+  #ScheckBoxInput{
+    font-size: 25px;
+  }
+  #StermsConditions{
+    width: 60%;
+    margin-top: 5%;
+    color: rgba(36,28,21,0.65);
+    font-size: 13px;
+    line-height: 1.5;
+    margin-left: 15px;
+  }
+  #StermsConditions a{
+    color: rgba(36,28,21,0.65);
+  }
+  
+  /* Recover */
+  
+  #Rcheckbox1{
+    display: flex;
+  }
+  .container{
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+  }
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  .container input:checked ~ .checkmark {
+    background-color: #007c89;
+  }
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  .container .checkmark:after {
+       top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+  #Rradiobox2input{
+    display: none;
+    margin-left: 8%;
+  }
+  #Rradiobox1input{
+    display: none;
+    margin-left: 8%;
+  }
+  .Rinput1{
+    min-width: 400px;
+    min-height: 40px;
+    font-size: 15px;
+    /* color: rgb(138, 135, 135); */
+    color: black;
+    padding-left: 10px;
+    border: 1px solid black;
+    margin-top: 5px;
+  }
+  #Rinput1:focus{
+    outline: none;
+    border: 2px solid #007c89;
+  }
+  #Rinput2:focus{
+    outline: none;
+    border: 2px solid #007c89;
+  }
+  #Rinput3:focus{
+    outline: none;
+    border: 2px solid #007c89;
+  }
+  #RusingMobile{
+    display: flex;
+    flex-direction: column;
+  }
+  #RusingMobile>label{
+    display: flex;
+    flex-direction: column;
+  }
+  #Rform{
+    height: 75vh;
+    width: 50%;
+    margin: auto;
+    line-height: 1.5;
+  }
+  .Rselectinput{
+    margin: 15px 0;
+  }
+  .Rpara{
+    width: 80%;
+  }
+  #Rhead{
+    margin-bottom: 5%;
+  }
+  #Rhead>h1{
+    font-size: 30px; 
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  #Rradio1{
+    margin-bottom: 7%;
+  }
+  #Rbuttons{
+    margin-top: 10%;
+  }
+  #Rbuttons>button{
+    background-color: #007c89;
+    margin-right: 5%;
+    min-width: 40%;
+    min-height: 50px;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+  }
+  #Rbuttons>a{
+    color: #007c89;
+  }
+  #SuccessDiv{
+    background-color: #d8eacc;
+    padding: 10px 20px;
+    line-height: 1.7;
+    font-size: 15px;
+    display: flex;
+    margin-bottom: 5%;
+  }
+  #SuccessDiv>div:first-child{
+    display: block;
+    margin: auto;
+    margin: auto 15px auto 5px;
+  }
+  #SuccessDiv>div>div:first-child{
+    font-weight: bold;
+  }
+  #SuccessDiv>div>div:last-child{
+    font-weight: bold;
+  }
+  #RDpbold{
+    font-weight: bold;
+  }
+  .recoverDone{
+    padding-top: 5%;
+  }
+  #REpara{
+    width: 75%;
+  }
+  #RSpassworda{
+    width: 85%;
+  }
+  #RSpassworda>a{
+    color: #007c89;
+  }

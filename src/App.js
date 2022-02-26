@@ -1,4 +1,9 @@
-import { TestNavbar } from "./Components/TestNavbar";
+import "./authentication.css"
+import { Loginpage } from './Components/loginpage';
+import { Signup } from './Components/signup';
+import {Recover} from "./Components/recover"
+import {Recoverdone} from "./Components/recoverdone"
+import { Resetpassword } from './Components/resetpassword';
 import {
   Routes,
   Route,
@@ -12,12 +17,16 @@ import { Ads } from './Components/ads'
 function App() {
   return (
     <div className="App">
-        <Navbar/>
         <Routes>
-            <Route path={"/"} element={ <Home/> } />
-            <Route path={"/search"} element={ <SearchPage/> } />
-            <Route path="/blog" element = {<Blog/>}></Route> 
-            <Route path="/ads" element = {<Ads/>}></Route> 
+            <Route path="/login" element={<Loginpage/>}></Route>
+            <Route path="/signup" element={<Signup/>}></Route>
+            <Route path="/forgot-username" element={<Recover/>}></Route>
+            <Route path="/forgot-password" element={<Resetpassword/>}></Route>
+            <Route path="/forgot-username-post" element={<Recoverdone/>}></Route>
+            <Route path={"/"} element={<><Navbar/><Home/></>} />
+            <Route path={"/search"} element={ <><Navbar/><SearchPage/></> } />
+            <Route path="/blog" element = {<><Navbar/><Blog/></>}></Route> 
+            <Route path="/ads" element = {<><Navbar/><Ads/></>}></Route> 
         </Routes>
         
     </div>
