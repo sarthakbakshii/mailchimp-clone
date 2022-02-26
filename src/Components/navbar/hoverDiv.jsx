@@ -43,7 +43,7 @@ export const HoverDiv = ({props})=>{
        
     </div>
     <div>{isopen&& <Hover1 isopen={isopen} setIsopen={setIsopen} />}
-    <div>{open2&& <Hover2  />}</div>
+    <div>{open2&& <Hover2 open2={open2} setOpen2={setOpen2} />}</div>
     
     </div>
     </div>

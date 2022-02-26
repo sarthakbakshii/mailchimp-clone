@@ -13,9 +13,9 @@ export const Inspiration = ({props})=>{
             props.setIsopen(false)
         }}>
                <p>{e.title}</p>
-               <h3>{e.desc1}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <p>></p></h3>
-               <h3>{e.desc2}<p>></p> </h3>
-               <h3>{e.desc3}<p>></p> </h3>
+               <h3>{e.desc1}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <p></p></h3>
+               <h3>{e.desc2}<p></p> </h3>
+               <h3>{e.desc3}<p></p> </h3>
                <br/>
                <hr/>
                <br/>

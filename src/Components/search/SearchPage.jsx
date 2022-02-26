@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import "./SearchPage.scss";
 import { Input } from '@chakra-ui/react'
 import SearchIcon from '@mui/icons-material/Search';
@@ -95,7 +95,7 @@ export const SearchPage = () =>{
 
         {sorted.map( a =>{
             return ( <div key={a.id}> 
-                            <h2> {a.name}</h2>
+                           <Link to={`${text}`}><h2> {a.name}</h2></Link>
                             <h3> {a.desc} </h3>
                     </div>)
         })}

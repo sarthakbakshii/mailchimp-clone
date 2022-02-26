@@ -1,5 +1,6 @@
 #top{
     padding-left: 150px;
+    padding-top: 80px;
 
     background-color: #ffe01b;
     display: grid;
@@ -9,6 +10,8 @@
     #width50_50{
         // width: 1000px;
         p:nth-child(1){
+            margin-bottom: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
             font-size: 54px;
             line-height: 8vh;
         }
@@ -24,9 +27,11 @@
      }  
 
      button{
+         margin-top: 25px;
          background-color: teal;
         //  width: ;
-        padding: 20px 35px 20px 35px;
+
+        padding: 20px 45px 20px 45px;
         color: white;
         border: none;
         font-weight: bold;
@@ -36,6 +41,7 @@
          text-decoration: none;
          color: black;
          font-weight: 400;
+         font-size: large;
      }
     
 }
