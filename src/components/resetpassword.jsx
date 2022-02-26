@@ -1,18 +1,22 @@
 import { useRef } from "react"
+import { useNavigate } from "react-router-dom"
 import logoimg from "../assets/logo-img.svg"
-import { resetpassword } from "../firebase"
+import { resetpassword } from "../firebase-config"
+import {Link} from "react-router-dom"
 
 export const Resetpassword=()=>{
     const RemailRef=useRef()
+    const usenavigate=useNavigate()
 
     async function resetP(){
         try{
             await resetpassword(RemailRef.current.value)
-            alert("reset link send succesful")
+            usenavigate("/forgot-username-post")
+            alert("Reset link send")
         }catch(error){
             var errorMessage = error.message;
             console.log(errorMessage);
-            alert("user not exist")
+            alert("User does not exist")
         }
     }
 
@@ -34,7 +38,7 @@ export const Resetpassword=()=>{
                     </div>
                     <div id="Rbuttons">
                         <button onClick={resetP}>Reset Password</button>
-                        <a href="/">Return to login</a>
+                        <Link to="/login">Return to login</Link>
                     </div>
                 </div>
                 <div id="StermsConditions">

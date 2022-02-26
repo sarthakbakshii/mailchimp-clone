@@ -33,6 +33,11 @@
   }
   #logInDiv{
     width: 95%;
+    margin-top: 5%;
+  }
+  #logInDiv>h1{
+    font-size: 30px; 
+    font-weight: bold;
   }
   #logInDiv>p>a{
     color:#007c89;
@@ -175,8 +180,9 @@
     display: flex;
     background-color: #fbcfbd;
     color:#241c15;
-    padding: 5px;
+    padding: 8px;
     line-height: 1.6;
+    margin-top: 15px;
   }
   #usernotfound a{
     color: #241c15;
@@ -185,6 +191,7 @@
     display: block;
     margin: auto;
     padding: 0 15px 0 5px;
+    width: 50px;
   }
   #Suser{
     display: none;
@@ -347,6 +354,8 @@
     /* color: rgb(138, 135, 135); */
     color: black;
     padding-left: 10px;
+    border: 1px solid black;
+    margin-top: 5px;
   }
   #Rinput1:focus{
     outline: none;
@@ -383,6 +392,11 @@
   #Rhead{
     margin-bottom: 5%;
   }
+  #Rhead>h1{
+    font-size: 30px; 
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
   #Rradio1{
     margin-bottom: 7%;
   }
@@ -409,6 +423,7 @@
     line-height: 1.7;
     font-size: 15px;
     display: flex;
+    margin-bottom: 5%;
   }
   #SuccessDiv>div:first-child{
     display: block;

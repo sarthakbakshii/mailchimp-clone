@@ -1,0 +1,36 @@
+.testNavbar{
+    /* border: 1px solid yellow; */
+    height: 80px;
+    width: 100%;
+    background-color: #FFE01B;
+    position: fixed;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    align-items: center;
+    padding-right: 100px;
+  
+}
+#testNavbar:hover {
+    background-color: white;
+}
+.testNavbar .login{
+    height: 40px;
+    width: 100px;
+    font-weight: bold ;
+    background-color: transparent;
+}
+.testNavbar .signup{
+    height: 40px;
+    width: 150px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    margin-right: 100px;
+    background-color: #007C89;
+}
+
+.navSpace{
+    height: 80px;
+}

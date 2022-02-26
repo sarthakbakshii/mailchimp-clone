@@ -1,0 +1,36 @@
+.resources{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+    margin-top: 0%;
+    padding-top: 1%;
+    width: 400px;
+    height: 600px;
+    align-items: flex-start;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: absolute;
+    top: 80px;
+    background-color: white;
+    
+}
+.resources>div{
+    margin: auto;
+    width: 90%;
+    text-align: left;
+}
+.resources>div>h3{
+    display: flex;
+    
+    justify-content: space-between;
+    gap: -5%;
+    margin: 8% 0;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 400;
+    
+}
+.resources>div>h3:hover{
+    color: teal;
+}

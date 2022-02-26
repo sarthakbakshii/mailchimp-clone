@@ -1,0 +1,97 @@
+.SearchSection{
+    height: 0vh;
+    transition: 0.5s;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Times New Roman', Times, serif;
+    flex-direction: column;
+    // position: fixed;
+    background-color: #242424;
+    // overflow: hidden;
+     color: white;
+
+    .searchBox{
+        // border: 1px solid red;
+        padding: 20px;
+        box-sizing: border-box;
+        width: 75%;
+        margin: auto;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .top{
+            // border: 1px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            .searchInput{
+                box-sizing: border-box;
+                width: 90%;
+                height: 80px;
+                border: 1px solid rgb(216, 216, 255);
+                background-color: transparent;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 30px;
+                padding-left: 30px;
+                color: white;
+            }
+            .searchBtn{
+                position: relative;
+                cursor: pointer;
+                left: -100px;
+            }
+            .cancle{
+                cursor: pointer;
+                font-size: 40px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        }
+        .bottom{
+            // border: 1px solid
+            //  border: 1px solid white;
+            padding: 20px;
+            box-sizing: border-box;
+             h3{
+                 color: white;
+                 font-family: sans-serif;
+                 
+             }
+             .buttonBox{
+                 display: flex;
+                 gap: 30px;
+             }
+              button{
+                     font-size: 25px;
+                     padding: 15px 40px;
+                     border: 1px solid white;
+                     background-color: transparent;
+                     color: white;
+                      font-family: 'Times New Roman', Times, serif;
+                 }
+        }
+    }
+
+    .hand{
+        // border: 1px solid;
+        padding: 10px 100px;
+        transform: translateY(60px);
+        z-index: 1000;
+        display: flex;
+        // opacity: 0;
+        justify-content: space-between;
+         .hand1{
+            height: 100px;
+            position: relative;
+              z-index: 2000;
+
+        }
+    }
+   
+}
+
+.overflowNo{
+    overflow: hidden;
+}

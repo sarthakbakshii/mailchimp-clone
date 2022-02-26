@@ -1,8 +1,13 @@
 import logoimg from "../assets/logo-img.svg"
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import { useNavigate } from "react-router-dom";
 
 export const Recoverdone=()=>{
+    const usenavigate=useNavigate()
 
+    function navigatetologin(){
+        usenavigate("/login")
+    }
     return (
         <div id="signup" >
             <div id="SformDiv">
@@ -16,7 +21,7 @@ export const Recoverdone=()=>{
                             <div>
                                 <CheckCircleOutlineIcon/>
                             </div>
-                            <div>
+                            <div id="greenSuccessDiv">
                                 <div>Success!</div>
                                 <div>An email with your username has been sent to</div>
                                 <div>pavithranr65@gmail.com</div>
@@ -25,7 +30,7 @@ export const Recoverdone=()=>{
                         <p className="Rpara">If the email does not arrive soon, check your spam folder. It was sent from <span id="RDpbold">confirm@mailchimp.com</span>.</p>
                     </div>
                     <div id="Rbuttons">
-                        <button>Return To Login</button>
+                        <button onClick={navigatetologin}>Return To Login</button>
                     </div>
                 </div>
                 <div id="StermsConditions">

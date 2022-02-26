@@ -1,0 +1,44 @@
+.products{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+    margin-top: 0%;
+    padding-top: 1%;
+    width: 400px;
+    height: 600px;
+    align-items: flex-start;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /* z-index: 1; */
+    position: absolute;
+    top: 80px;
+    background-color: white;
+
+    
+    
+    
+}
+#pr{
+    display: flex;
+    gap: 0%;
+}
+.products>div{
+    margin: auto;
+    width: 90%;
+    text-align: left;
+}
+.products>div>h3{
+    display: flex;
+    
+    justify-content: space-between;
+    gap: 5%;
+    margin: 8% 0;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 400;
+    
+}
+.products>div>h3:hover{
+    color: teal;
+}

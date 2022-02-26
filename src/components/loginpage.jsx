@@ -1,29 +1,28 @@
 import React, { useRef, useState } from "react";
 import logoimg from "../assets/logo-img.svg"
 import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
-// import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-// import { HidePassword } from "./smallfunctions";
 import BlockIcon from '@mui/icons-material/Block';
-import { login } from "../firebase";
+import { login } from "../firebase-config";
+import {Link, useNavigate} from "react-router-dom"
 
 export const Loginpage=()=>{
     const [loading,setloading]=useState(false)
     const [userNotFound,setuserNotFount]=useState(false)
     const emailRef=useRef()
     const passwordRef=useRef()
+    const usenavigate=useNavigate()
 
     async function signin(){
         setloading(true)
         try{
             await login(emailRef.current.value,passwordRef.current.value)
-            alert("login succesful")
+            alert("Login Succesful")
+            usenavigate("/")
         }catch(error){
             setuserNotFount(true)
-            // var errorCode = error.code;
             var errorMessage = error.message;
-            // console.log(errorCode);
             console.log(errorMessage);
-            alert("user not exist")
+            alert("User not Exist")
         }
         setloading(false)
     }
@@ -41,8 +40,8 @@ export const Loginpage=()=>{
                         </p>
                         {userNotFound?<div id="usernotfound">
                             <BlockIcon id="notallowed"/>
-                            <p>Sorry, we couldn't find an account with that username. Can we help you recover your <a href="/">username?</a></p>    
-                        </div>  :null}
+                            <p>Sorry, we couldn't find an account with that username. Can we help you recover your <Link to="/forgot-username" style={{color:"#007c89"}}>username?</Link></p>    
+                        </div>:null}
                         <div className="form">
                             <form action="" >
                                 <div className="LinputFields">
@@ -70,9 +69,9 @@ export const Loginpage=()=>{
                                 </div>
                             </form>
                             <div id="Lforgot">
-                                <a href="/">Forgot username?</a>
+                                <Link to="/forgot-username">Forgot username?</Link>
                                 <span>.</span>
-                                <a href="/">Forgot password?</a>
+                                <Link to="/forgot-password">Forgot password?</Link>
                             </div>
                         </div>
                     </div>

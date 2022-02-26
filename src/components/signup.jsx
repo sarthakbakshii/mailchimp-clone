@@ -1,18 +1,21 @@
 import logoimg from "../assets/logo-img.svg"
 // import leftimg from "../assets/ezgif.com-gif-maker.jpg"
 import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
-import { signup } from "../firebase";
+import { signup } from "../firebase-config";
 import { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Signup=()=>{
     const [loading,setloading]=useState(false)
     const emailRef=useRef()
     const passwordRef=useRef()
+    const navigate=useNavigate()
 
     async function createuser(){
         setloading(true)
         try{
             await signup(emailRef.current.value,passwordRef.current.value)
+            navigate("/login")
         }catch{        
             alert("user already exist")
         }
@@ -71,10 +74,7 @@ export const Signup=()=>{
                     </p>
                 </div>
             </div>
-            <div id="SimageDiv">
-                {/* <img src={leftimg} alt="imageDiv" /> */}
-                {/* <div id="rightYellowDiv"></div> */}
-            </div>
+            <div id="SimageDiv"></div>
         </div>
     )
 }

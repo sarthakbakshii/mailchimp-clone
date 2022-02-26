@@ -1,14 +1,18 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import logoimg from "../assets/logo-img.svg"
-import { resetpassword } from "../firebase";
+import { resetpassword } from "../firebase-config";
+import {Link} from "react-router-dom"
 
 export const Recover=()=>{
     const [rEmail,setrEmail]=useState("")
+    const usenavigate=useNavigate()
 
     async function resetP(){
         try{
             await resetpassword(rEmail)
             alert("reset link send succesful")
+            usenavigate("/forgot-username-post")
         }catch(error){
             var errorMessage = error.message;
             console.log(errorMessage);
@@ -84,7 +88,7 @@ export const Recover=()=>{
                         console.log(rEmail)
                     }}>
                         <button onClick={resetP}>Recover Username</button>
-                        <a href="/">Return to login</a>
+                        <Link to="/login">Return to login</Link>
                     </div>
                 </div>
                 <div id="StermsConditions">
