@@ -339,13 +339,14 @@
   #Rradiobox1input{
     display: none;
     margin-left: 8%;
-    
   }
   .Rinput1{
     min-width: 400px;
     min-height: 40px;
-    font-size: 18px;
-    color: rgb(199, 196, 196);
+    font-size: 15px;
+    /* color: rgb(138, 135, 135); */
+    color: black;
+    padding-left: 10px;
   }
   #Rinput1:focus{
     outline: none;

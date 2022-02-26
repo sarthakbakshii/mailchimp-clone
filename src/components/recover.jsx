@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import logoimg from "../assets/logo-img.svg"
 import { resetpassword } from "../firebase";
 
@@ -54,11 +54,22 @@ export const Recover=()=>{
                             </label>
                             <div  id="Rradiobox2input">
                                 <div className="Rselectinput">
-                                    <select className="Rinput1" id="Rinput2">
+                                    <select className="Rinput1" style={{width: "400px"}}>
                                         <option>Select Country</option>
-                                        <option>+91</option>
-                                        <option>+0</option>
-                                        <option>+2</option>
+                                        <option>India (+91)</option>
+                                        <option>USA, US territories, Canada, and some Caribbean countries (+1)</option>
+                                        <option>Afghanistan (+93)</option>
+                                        <option>Albania (+355)</option>
+                                        <option>Algeria (+213)</option>
+                                        <option>Andorra (+376)</option>
+                                        <option>Austria (+43)</option>
+                                        <option>Bangladesh (+880)</option>
+                                        <option>Brazil (+55)</option>
+                                        <option>Burundi (+257)</option>
+                                        <option>Cape Verde (+238)</option>
+                                        <option>Ireland (+353)</option>
+                                        <option>Lebanon (+961)</option>
+                                        <option>Mauritius (+230)</option>
                                     </select>
                                 </div>
                                 <div className="Rselectinput">

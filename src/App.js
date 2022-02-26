@@ -1,18 +1,17 @@
-// import './App.css';
 import "./authentication.css"
-import { Loginpage } from './components/loginpage';
-// import { Resetpassword } from './components/resetpassword';
+// import { Loginpage } from './components/loginpage';
 // import { Signup } from './components/signup';
-// import {Recover} from "./components/recover"
+import {Recover} from "./components/recover"
 // import {Recoverdone} from "./components/recoverdone"
-// import VisibilityIcon from '@mui/icons-material/Visibility';
+// import { Resetpassword } from './components/resetpassword';
+
 
 function App() {
   return (
     <div className="App">
-      <Loginpage/>
+      {/* <Loginpage/> */}
       {/* <Signup/> */}
-      {/* <Recover/> */}
+      <Recover/>
       {/* <Recoverdone/> */}
       {/* <Resetpassword/> */}
     </div>
