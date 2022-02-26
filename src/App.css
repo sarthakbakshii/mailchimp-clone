@@ -5,7 +5,7 @@
   display: flex;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
   background-attachment: fixed;
 }
 #login>:first-child{
@@ -41,6 +41,7 @@
   margin-top: 30px;
   font-size: 1rem;
   font-weight: bold;
+  max-width: 440px;
 }
 .LinputFields>div{
   margin-bottom: 10px;
@@ -122,9 +123,9 @@
   font-size: 13px;
   /* border: 1px solid green; */
   color: rgba(36,28,21,0.65);
-  position:absolute;
+  position:fixed;
   bottom: 0;
-  width: inherit;
+  width: 35%;
   margin: 0 5px;
   line-height: 1.5;
 }
@@ -147,14 +148,20 @@
   background-position-x: center;
   background-position-y: center;
   height: 100%;
-  width: inherit;
   position: absolute;
-  /* top: 0;
-  left: 0; */
-  min-width:70%;
   background-color: #d9d9d9;
   background-repeat: no-repeat;
   background-size: cover;
+  min-width:65%;
+  transform: translateX(15px);
+}
+#username:focus{
+  outline: none;
+  border: 2px solid #007c89;
+}
+#passsword:focus{
+  outline: none;
+  border: 2px solid #007c89;
 }
 #LimageBottom>p>button{
   padding: 10px;
@@ -163,16 +170,30 @@
   font-weight: bold;
   min-width: 100px;
 }
-#username:focus{
-  border: 1px solid #007c89;
+#usernotfound{
+  display: flex;
+  background-color: #fbcfbd;
+  color:#241c15;
+  padding: 5px;
+  line-height: 1.6;
 }
-#password:focus{
-  border: 1px solid #007c89;
-  outline: #007c89;
+#usernotfound a{
+  color: #241c15;
 }
-
+#notallowed{
+  display: block;
+  margin: auto;
+  padding: 0 15px 0 5px;
+}
+#Suser{
+  display: none;
+}
 /* signup page */
 
+#email:focus{
+  outline: none;
+  border: 2px solid #007c89;
+}
 #signup{
   display: flex;
 }
@@ -182,7 +203,7 @@
   margin-left: 15px;
   margin-top: 15px;
 }
-/* #imageDiv{
+/* #SimageDiv{
   width: 30%;
   border: 1px solid black; 
   background-image: url(https://login.mailchimp.com/release/1.1.1577ee53971db3fe73beb54c0952abdb32bf24fba/images/brand_assets/illos/art-hero-flowers.png);
@@ -258,4 +279,158 @@
 }
 #StermsConditions a{
   color: rgba(36,28,21,0.65);
+}
+
+/* Recover */
+
+#Rcheckbox1{
+  display: flex;
+}
+.container{
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  user-select: none;
+}
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.container input:checked ~ .checkmark {
+  background-color: #007c89;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+#Rradiobox2input{
+  display: none;
+  margin-left: 8%;
+}
+#Rradiobox1input{
+  display: none;
+  margin-left: 8%;
+  
+}
+.Rinput1{
+  min-width: 400px;
+  min-height: 40px;
+  font-size: 18px;
+  color: rgb(199, 196, 196);
+}
+#Rinput1:focus{
+  outline: none;
+  border: 2px solid #007c89;
+}
+#Rinput2:focus{
+  outline: none;
+  border: 2px solid #007c89;
+}
+#Rinput3:focus{
+  outline: none;
+  border: 2px solid #007c89;
+}
+#RusingMobile{
+  display: flex;
+  flex-direction: column;
+}
+#RusingMobile>label{
+  display: flex;
+  flex-direction: column;
+}
+#Rform{
+  height: 75vh;
+  width: 50%;
+  margin: auto;
+  line-height: 1.5;
+}
+.Rselectinput{
+  margin: 15px 0;
+}
+.Rpara{
+  width: 80%;
+}
+#Rhead{
+  margin-bottom: 5%;
+}
+#Rradio1{
+  margin-bottom: 7%;
+}
+#Rbuttons{
+  margin-top: 10%;
+}
+#Rbuttons>button{
+  background-color: #007c89;
+  margin-right: 5%;
+  min-width: 40%;
+  min-height: 50px;
+  color: white;
+  font-size: 15px;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+}
+#Rbuttons>a{
+  color: #007c89;
+}
+#SuccessDiv{
+  background-color: #d8eacc;
+  padding: 10px 20px;
+  line-height: 1.7;
+  font-size: 15px;
+  display: flex;
+}
+#SuccessDiv>div:first-child{
+  display: block;
+  margin: auto;
+  margin: auto 15px auto 5px;
+}
+#SuccessDiv>div>div:first-child{
+  font-weight: bold;
+}
+#SuccessDiv>div>div:last-child{
+  font-weight: bold;
+}
+#RDpbold{
+  font-weight: bold;
+}
+.recoverDone{
+  padding-top: 5%;
+}
+#REpara{
+  width: 75%;
+}
+#RSpassworda{
+  width: 85%;
+}
+#RSpassworda>a{
+  color: #007c89;
 }

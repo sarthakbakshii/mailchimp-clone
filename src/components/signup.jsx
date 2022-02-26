@@ -1,8 +1,24 @@
 import logoimg from "../assets/logo-img.svg"
 // import leftimg from "../assets/ezgif.com-gif-maker.jpg"
 import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
+import { signup } from "../firebase";
+import { useRef, useState } from "react";
 
 export const Signup=()=>{
+    const [loading,setloading]=useState(false)
+    const emailRef=useRef()
+    const passwordRef=useRef()
+
+    async function createuser(){
+        setloading(true)
+        try{
+            await signup(emailRef.current.value,passwordRef.current.value)
+        }catch{        
+            alert("user already exist")
+        }
+        setloading(false)
+    }
+
     return (
         <div id="signup">
             <div id="SformDiv">
@@ -19,7 +35,7 @@ export const Signup=()=>{
                             <div>
                                 <label for="email">Email</label>
                             </div>
-                            <input type="email" id="email"/>
+                            <input type="email" id="email" ref={emailRef}/>
                         </div>
                         <div className="LinputFields">
                             <div>
@@ -37,7 +53,7 @@ export const Signup=()=>{
                                     </div>
                                 </label>
                             </div>
-                            <input type="password" id="passsword"/>
+                            <input type="password" id="passsword" ref={passwordRef}/>
                         </div>
                         <div id="LcheckBok ScheckBox" className="Sparagraph" >
                             <input type="checkbox" id="ScheckBoxInput"/>
@@ -46,7 +62,7 @@ export const Signup=()=>{
                         <div className="Sparagraph">
                             <p>By creating an account, you agree to our <a href="/">Terms</a> and have read and acknowledge the <a href="/">Global Privacy Statement</a></p>
                         </div>
-                        <button id="signUpButton">Sign Up</button>
+                        <button id="signUpButton" onClick={createuser} disabled={loading}>Sign Up</button>
                     </form>
                 </div>
                 <div id="StermsConditions">
