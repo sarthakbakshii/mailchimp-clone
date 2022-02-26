@@ -89,7 +89,12 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-  
+        h1{
+            font-weight: 500;
+            font-size: 18px;
+            text-transform: capitalize;
+            color: teal;
+        }
 
         h2{
             font-size: 25px;

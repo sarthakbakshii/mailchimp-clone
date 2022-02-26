@@ -1,0 +1,61 @@
+#back_voilet{
+ background-image: linear-gradient(to bottom, #f8d01f , white);
+ height: 60vh;
+ #voilet_child{
+     margin: auto;
+     width: 45vw;
+     line-height: 50px;
+     padding-top: 25vh;
+     h1{
+        font-size: 52px;
+        margin-bottom: 20px;
+     }
+     p{
+        font-size: 25px;
+        font-weight: 100;
+     }
+ }
+
+}
+
+.margin_bottom{
+    margin-bottom: 50px;
+}
+.all_width{
+    width: 50vw;
+    margin: auto;
+}
+.big_font{
+    font-size: 52px;
+}
+.mid_small_font{
+    font-size: 32px;
+}
+
+.first_big{
+    width: 50vw;
+    margin: auto;
+}
+
+#footer{
+    background-color: #efeeea;
+
+    #footer_inside{
+    
+        width: 90%;
+        margin-left: 10%;
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: 18% 18% 18% 18% 18%;
+        
+        padding-top: 50px;
+    }
+    .small_font{
+        font-size: 14px;
+    }
+    .small_image{
+        width:150px;
+        // margin-bottom: 50px;
+    }
+
+}
