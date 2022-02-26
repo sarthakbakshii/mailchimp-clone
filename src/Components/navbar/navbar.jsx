@@ -56,10 +56,10 @@ export const Navbar =()=>{
          document.getElementById("testNavbar").style.background = "white";
     }  
 
-return (<div id="testNavbar" onMouseOver={onmouseover}
+return (<div  onMouseOver={onmouseover}
 onMouseOut={onmouseout} > 
     <SearchSection cancleSearch={cancleSearch } />
-<div class="navbar"  onMouseEnter={()=>{
+<div class="navbar" id="testNavbar" onMouseEnter={()=>{
     setInspiration(false);
     setIsopen(false);
     setResource(false);
