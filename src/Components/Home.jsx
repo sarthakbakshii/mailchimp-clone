@@ -1,5 +1,8 @@
+import { useSelector } from "react-redux";
 import "./styles/home.scss";
 export const Home = () => {
+    
+
     return (
         <>
         <div style={{height:"80px"}}></div>

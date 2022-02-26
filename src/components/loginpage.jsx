@@ -3,9 +3,22 @@ import logoimg from "../assets/logo-img.svg"
 import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 import BlockIcon from '@mui/icons-material/Block';
 import { login } from "../firebase-config";
-import {Link, useNavigate} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom";
+import {useSelector , useDispatch} from 'react-redux';
+import { userEmail} from '../Redux/action'
+
 
 export const Loginpage=()=>{
+
+    // ------------- redux
+    const userReduxEmail = useSelector( store => store.email);
+    console.log("redux data",userReduxEmail );
+
+    const dispatch = useDispatch()
+
+
+
+
     const [loading,setloading]=useState(false)
     const [userNotFound,setuserNotFount]=useState(false)
     const emailRef=useRef()
@@ -14,6 +27,8 @@ export const Loginpage=()=>{
 
     async function signin(){
         setloading(true)
+
+        dispatch( userEmail(emailRef.current.value));
         try{
             await login(emailRef.current.value,passwordRef.current.value)
             alert("Login Succesful")
