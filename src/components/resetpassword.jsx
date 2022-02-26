@@ -2,15 +2,26 @@ import { useRef } from "react"
 import { useNavigate } from "react-router-dom"
 import logoimg from "../assets/logo-img.svg"
 import { resetpassword } from "../firebase-config"
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
+import {useSelector , useDispatch} from 'react-redux';
+import { userEmail} from '../Redux/action'
 
 export const Resetpassword=()=>{
     const RemailRef=useRef()
     const usenavigate=useNavigate()
 
+
+  const userReduxEmail = useSelector( store => store.email);
+    console.log("redux data",userReduxEmail );
+
+    const dispatch = useDispatch()
+
+    
+
     async function resetP(){
         try{
             await resetpassword(RemailRef.current.value)
+               dispatch( userEmail(RemailRef.current.value));
             usenavigate("/forgot-username-post")
             alert("Reset link send")
         }catch(error){
@@ -32,7 +43,7 @@ export const Resetpassword=()=>{
                         <p className="REpara" id="RSpassworda">Fear not. We’ll email you instructions to reset your password. If you don’t have access to your email anymore, you can try <a href="/" >account recovery</a>.</p>
                     </div>
                     <div className="Rselectinput">
-                        <label>Username</label>
+                        <label>Enter Email</label>
                         <br/>
                         <input type="email" className="Rinput1" id="Rinput3" ref={RemailRef}/>
                     </div>

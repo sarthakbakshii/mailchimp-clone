@@ -1,9 +1,11 @@
 import { GET_DATA } from "./actionTypes";
 import { FILTER_DATA } from './actionTypes'
+import { USER_EMAIL} from './actionTypes';
 
 const initState = {
     pages : [],
     sorted : [],
+    email : ""
 }
 
 const reducer = ( store = initState , {type , payload}) =>{
@@ -22,6 +24,10 @@ const reducer = ( store = initState , {type , payload}) =>{
             });
             console.log(filter, "filter")
             return { ...store , sorted : filter }
+        }
+
+        case USER_EMAIL : {
+                return { ...store , email : payload }
         }
             
         default:

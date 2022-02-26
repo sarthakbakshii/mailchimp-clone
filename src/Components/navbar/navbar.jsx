@@ -6,9 +6,20 @@ import { Resourecs } from "./resources";
 import { SearchSection } from "../search/SearchSection";
 import { Link } from "react-router-dom";
 import logoimg from "../assets/logoimg.svg"
+import { useSelector } from "react-redux";
 
 
 export const Navbar =()=>{
+
+     const userReduxEmail = useSelector( store => store.email);
+    console.log("redux data login",userReduxEmail );
+
+    const [authEmail , setAuthEmail] = useState(userReduxEmail);
+
+    
+
+
+
     const [isopen,setIsopen] = useState(false);
     const [resource,setResource] = useState(false);
     const[isnpiration,setInspiration] = useState(false);
@@ -107,8 +118,18 @@ onMouseOut={onmouseout} >
     <div className="nav-right">
     {/* <img src={require("../icons/search.png")} className="search"/> */}
     <i class="fi fi-br-search search" onClick={showSearch}></i>
-    <button className="nav-login"><Link to="/login">Log In</Link></button>
-    <button className="nav-signup" style={{border:"none"}}><Link to="/signup">Sign Up Free</Link></button>
+   {
+    authEmail == ""?(
+         <>
+          <Link to="/login"><button className="nav-login">Log In</button> </Link>
+          <Link to="/signup"> <button className="nav-signup" style={{border:"none"}}>Sign Up Free </button> </Link>
+         </>
+          )
+          : ( <>
+             <button id="logedinBtn"> <span>{authEmail.split("")[0]}</span> Hi , {authEmail}</button>
+             </>)
+    }
+   
     </div>
    
 </div>

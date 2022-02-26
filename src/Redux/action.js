@@ -1,4 +1,4 @@
-import { GET_DATA} from './actionTypes';
+import { GET_DATA, USER_EMAIL} from './actionTypes';
 import { FILTER_DATA } from './actionTypes'
 
 
@@ -12,6 +12,13 @@ export const getData = (payload) =>{
 export const filterData = (payload) =>{
     return {
         type : FILTER_DATA,
+        payload : payload
+    }
+}
+
+export const userEmail = (payload) =>{
+    return {
+        type : USER_EMAIL,
         payload : payload
     }
 }

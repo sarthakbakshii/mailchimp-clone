@@ -2,7 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from 'firebase/firestore'
-import {createUserWithEmailAndPassword,signInWithEmailAndPassword, getAuth, sendPasswordResetEmail, signOut} from "firebase/auth"
+import {createUserWithEmailAndPassword,signInWithEmailAndPassword, getAuth, signOut, sendPasswordResetEmail} from "firebase/auth"
 
 
 const firebaseConfig = {

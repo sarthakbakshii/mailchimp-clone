@@ -107,7 +107,7 @@
     
     
 
-}.nav-right>button{
+}.nav-right button{
     width: 30%;
     height: 40px;
     
@@ -153,4 +153,23 @@
 }
 .nav-signup:hover{
     background-color: rgb(0, 77, 64);
+}
+/* =============== */
+#logedinBtn{
+    width: 350px;
+
+    border: none;
+    border-left: 2px solid;
+}
+#logedinBtn span{
+    border: 1px solid;
+    /* padding: 10px 20px; */
+    display: inline-block;
+    border-radius: 50%;
+    font-size: 20px;
+    background-color: #FBEFC7;
+    margin-right: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 40px;
+    height: 40px;
 }
