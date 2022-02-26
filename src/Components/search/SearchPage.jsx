@@ -49,7 +49,7 @@ export const SearchPage = () =>{
         searchHandler()
     }, [])
 
-      const KeyboardEnterHandler = (e) =>{
+    const KeyboardEnterHandler = (e) =>{
         if (e.key === 'Enter') searchHandler()
     }
 
@@ -95,10 +95,12 @@ export const SearchPage = () =>{
 
         {sorted.map( a =>{
             return ( <div key={a.id}> 
+        
                             <h2> {a.name}</h2>
                             <h3> {a.desc} </h3>
                     </div>)
         })}
+       
         
         </section>
         
