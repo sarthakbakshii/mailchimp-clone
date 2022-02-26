@@ -1,5 +1,6 @@
-import './App.css';
-// import { Loginpage } from './components/loginpage';
+// import './App.css';
+import "./authentication.css"
+import { Loginpage } from './components/loginpage';
 // import { Resetpassword } from './components/resetpassword';
 // import { Signup } from './components/signup';
 // import {Recover} from "./components/recover"
@@ -9,7 +10,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      {/* <Loginpage/> */}
+      <Loginpage/>
       {/* <Signup/> */}
       {/* <Recover/> */}
       {/* <Recoverdone/> */}
