@@ -4,6 +4,8 @@ import { Inspiration } from "./inspiration";
 import "./navbar.css";
 import { Resourecs } from "./resources";
 import { SearchSection } from "../search/SearchSection";
+import { Link } from "react-router-dom";
+import logoimg from "../assets/logoimg.svg"
 
 
 export const Navbar =()=>{
@@ -46,7 +48,13 @@ export const Navbar =()=>{
 return (<div id="testNavbar" onMouseOver={onmouseover}
 onMouseOut={onmouseout} > 
     <SearchSection cancleSearch={cancleSearch } />
-<div class="navbar"   >
+<div class="navbar"  onMouseEnter={()=>{
+    setInspiration(false);
+    setIsopen(false);
+    setResource(false);
+}} onMouseLeave={()=>{
+    
+}}>
 
     <div className="nav-left" >
         <div onMouseEnter={()=>{
@@ -87,16 +95,20 @@ onMouseOut={onmouseout} >
             setResource(false);
         }}>Pricing</div>
     </div>
-    <div className="nav-center">
-        <img src="https://dislack.com/blog/content/images/2019/06/horizontal-anim-2.gif" alt="" className="logo-chimp" onClick={()=>{
+    
+    <Link to="/"><div className="nav-center">
+    <img src={logoimg} className="logoimg"/>
+      <h1>Mail Chimp</h1> 
+      
+        {/* <img src="https://www.pikpng.com/pngl/m/274-2747614_mailchimp-logo-transparent-mailchimp-clipart.png" alt="" className="logo-chimp" onClick={()=>{
 
-        }}></img>
-    </div>
+        }}></img> */}
+    </div></Link>
     <div className="nav-right">
     {/* <img src={require("../icons/search.png")} className="search"/> */}
     <i class="fi fi-br-search search" onClick={showSearch}></i>
     <button className="nav-login">Log In</button>
-    <button className="nav-signup">Sign Up Free</button>
+    <button className="nav-signup" style={{border:"none"}}>Sign Up Free</button>
     </div>
    
 
