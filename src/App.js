@@ -14,6 +14,10 @@ import { Navbar } from "./Components/navbar/navbar";
 import { Blog } from "./Components/blog";
 import { Ads } from './Components/ads'
 
+
+import { Payment } from "./Components/paymentPage/Payment";
+import { PaymentCard } from "./Components/PlanPage/PaymentCard";
+
 function App() {
   return (
     <div className="App">
@@ -27,6 +31,10 @@ function App() {
             <Route path={"/search"} element={ <><Navbar/><SearchPage/></> } />
             <Route path="/blog" element = {<><Navbar/><Blog/></>}></Route> 
             <Route path="/ads" element = {<><Navbar/><Ads/></>}></Route> 
+
+
+            <Route path="/payment" element={<Payment />}></Route>
+            <Route path="/plans" element={<PaymentCard />}></Route>
         </Routes>
         
     </div>

@@ -7,15 +7,18 @@ import { BrowserRouter } from "react-router-dom";
 import { ChakraProvider } from '@chakra-ui/react';
 import { Provider as ReduxProvider} from 'react-redux';
 import { store } from './Redux/store';
+import { PriceContextProvider} from './context/PriceContext'
 
 ReactDOM.render(
   <React.StrictMode>
     <ReduxProvider store={store}>
+    <PriceContextProvider>
       <ChakraProvider>
           <BrowserRouter>
             <App />
           </BrowserRouter>
       </ChakraProvider>
+      </PriceContextProvider>
     </ReduxProvider>
   </React.StrictMode>,
   document.getElementById('root')
