@@ -90,3 +90,7 @@ In payment section we use **Pay pal.**
 | Creadit card | Pay pal |
 
 ![](https://miro.medium.com/max/1400/1*ftKCUwQvjBtoOg6-WfJA3Q.png)
+
+<br/>
+<br/>
+![image](https://user-images.githubusercontent.com/71251834/155877558-1d6091ef-6d93-4dfd-a75f-353de7db9dfc.png)
