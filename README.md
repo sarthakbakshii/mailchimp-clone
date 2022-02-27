@@ -65,6 +65,11 @@
  
  ![](https://miro.medium.com/max/1400/1*umZsECiuaeJtAUIfnWfw_A.png)
  
+  - If details are corrent 
+ 
+ ![image](https://user-images.githubusercontent.com/71251834/155871947-5ff80578-e298-40d6-9730-3fc5c05f9014.png)
+
+ 
  
  - On clicking forget password it will collect your email address and send a mail on it
 
