@@ -93,4 +93,4 @@ In payment section we use **Pay pal.**
 
 <br/>
 <br/>
-![image](https://user-images.githubusercontent.com/71251834/155877558-1d6091ef-6d93-4dfd-a75f-353de7db9dfc.png)
+![image](https://user-images.githubusercontent.com/71251834/155877709-822e4c30-264d-40e8-ba92-f1332f5df8f7.png)
