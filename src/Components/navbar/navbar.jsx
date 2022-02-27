@@ -104,7 +104,8 @@ onMouseOut={onmouseout} >
             setInspiration(false);
             setIsopen(false);
             setResource(false);
-        }}>Pricing</div>
+
+        }}> <Link to={"/plans"}>  Pricing </Link></div>
     </div>
     
     <Link to="/"><div className="nav-center">
