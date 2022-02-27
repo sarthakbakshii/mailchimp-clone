@@ -93,5 +93,6 @@ In payment section we use **Pay pal.**
 
 <br/>
 <br/>
-## Team Pandavs
+
+<h1>Team Pandavs</h1>
 <img src="https://miro.medium.com/max/1400/1*7xr6kAYTmyzJmwcHhKHH1w.png"/>
