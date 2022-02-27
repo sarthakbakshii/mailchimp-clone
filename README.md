@@ -93,4 +93,5 @@ In payment section we use **Pay pal.**
 
 <br/>
 <br/>
-![image](https://user-images.githubusercontent.com/71251834/155877709-822e4c30-264d-40e8-ba92-f1332f5df8f7.png)
+## Team Pandavs
+<img src="https://miro.medium.com/max/1400/1*7xr6kAYTmyzJmwcHhKHH1w.png"/>
