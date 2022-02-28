@@ -13,8 +13,23 @@ import { SearchPage} from './Components/search/SearchPage';
 import { Navbar } from "./Components/navbar/navbar";
 import { Blog } from "./Components/blog";
 import { Ads } from './Components/ads'
+import { auth, logout } from "./firebase-config";
+import {onAuthStateChanged} from "firebase/auth"
 
 function App() {
+  // console.log(auth.currentUser.email)
+  onAuthStateChanged(auth,(currentUser)=>{
+    console.log(currentUser.email)
+  })
+
+  async function logOut(){
+    try{
+      await logout(auth)
+      alert("logged out")
+    }catch(e){
+      alert(e.message)
+    }
+  }
   return (
     <div className="App">
         <Routes>

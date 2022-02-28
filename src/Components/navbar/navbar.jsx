@@ -12,7 +12,6 @@ import { useSelector } from "react-redux";
 export const Navbar =()=>{
 
      const userReduxEmail = useSelector( store => store.email);
-    console.log("redux data login",userReduxEmail );
 
     const [authEmail , setAuthEmail] = useState(userReduxEmail);
 

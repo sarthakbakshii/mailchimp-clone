@@ -12,7 +12,6 @@ export const SearchSection = ({cancleSearch }) =>{
      const toast = useToast()
 
     const [ pages , setpages ] = useState([]);
-    console.log(pages)
 
     const navigate = useNavigate();
     
