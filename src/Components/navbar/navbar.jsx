@@ -7,6 +7,7 @@ import { SearchSection } from "../search/SearchSection";
 import { Link } from "react-router-dom";
 import logoimg from "../assets/logoimg.svg"
 import { useSelector } from "react-redux";
+import SearchIcon from '@mui/icons-material/Search';
 
 
 export const Navbar =()=>{
@@ -117,8 +118,9 @@ onMouseOut={onmouseout} >
         }}></img> */}
     </div></Link>
     <div className="nav-right">
-    {/* <img src={require("../icons/search.png")} className="search"/> */}
-    <i class="fi fi-br-search search" onClick={showSearch}></i>
+    {/* <img src={require("../icons/search.png")} className="search"/> 
+    <i className="fi fi-br-search search" onClick={showSearch}> search </i>*/}
+     <SearchIcon className="fi fi-br-search search" onClick={showSearch} sx={{ fontSize: 28 }} />
    {
     authEmail == ""?(
          <>
