@@ -26,15 +26,17 @@
  
  -  On clicking on Search icon in navbar, navbar will slide down and    search section will appears.
 
-![](https://miro.medium.com/max/1400/1*LSYTgNLDF7pTn4fe6Oid6w.png)
+<!-- ![](https://miro.medium.com/max/1400/1*LSYTgNLDF7pTn4fe6Oid6w.png) -->
+<img src="https://user-images.githubusercontent.com/71251834/159175171-6b1a4099-cdc4-4332-976f-8ab13b38160b.gif"/>
 <br/>
 
- -  On search any desired section it will show the list and all items according to that section
+ -  On search any desired section it will show the list and all items according to that section. <br/> We can even filter the type of specific sections which we are doing with **react redux**.
 
- ![](https://miro.medium.com/max/1400/1*cm77TaCz9BKsxh5wa7_ZUw.png) 
+<!--  ![](https://miro.medium.com/max/1400/1*cm77TaCz9BKsxh5wa7_ZUw.png)  -->
+<img src="https://user-images.githubusercontent.com/71251834/159175199-d79d3237-4eba-4f63-813e-483a3cfefe70.gif"/>
 <br/>
 
- - We can even filter the type of specific sections which we are doing with **react redux**
+ 
 
 ## Blog page and Ads page 
 
